@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -114,14 +115,21 @@ export const Navbar = () => {
           ))}
         </div>
 
-        {/* mobile nav */}
-        <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50 rounded-md hover:bg-foreground/5 transition-colors duration-300 ml-4"
-          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
-        </button>
+        {/* Theme Toggle and mobile menu */}
+        <div className="flex items-center space-x-2">
+          <div className="hidden md:block">
+            <ThemeToggle />
+          </div>
+          
+          <button
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className="md:hidden p-2 text-foreground z-50 rounded-md hover:bg-foreground/5 transition-colors duration-300"
+            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
+          </button>
+        </div>
+
 
         <div
           className={cn(
@@ -144,7 +152,8 @@ export const Navbar = () => {
           >
             <X size={24} />
           </button>
-          <div className="flex flex-col space-y-8 text-xl mt-12" role="menu">
+          
+          <div className="flex flex-col items-center space-y-8 text-xl mt-12" role="menu">
             {navItems.map((item, key) => (
               <a
                 key={key}
@@ -173,6 +182,10 @@ export const Navbar = () => {
                 {item.name}
               </a>
             ))}
+            
+            <div className="pt-4 mt-4 border-t border-foreground/20 w-full max-w-xs">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </div>
