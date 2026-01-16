@@ -49,14 +49,20 @@
   }
   @keyframes meteor {
     0% {
-      transform: rotate(215deg) translateX(0);
+      transform: rotate(215deg) translateX(100px); /* Start slightly off-screen */
       opacity: 0;
     }
-    10% {
+    5% {
       opacity: 1;
     }
-    90% {
+    70% {
       opacity: 1;
+    }
+    85% {
+      opacity: 0.5;
+    }
+    95% {
+      opacity: 0;
     }
     100% {
       transform: rotate(215deg) translateX(-100vw);

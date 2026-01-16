@@ -42,19 +42,42 @@ export const StarBackground = () => {
   };
 
   const generateMeteors = () => {
-    const numberOfMeteors = 12;
+    const numberOfMeteors = 16; // Increase total number of meteors
     const newMeteors = [];
 
     for (let i = 0; i < numberOfMeteors; i++) {
+      // Distribute meteors among three regions: left middle, top left, and top middle
+      let xRangeStart, xRangeEnd, yRangeStart, yRangeEnd;
+      
+      if (i % 3 === 0) {
+        // Left middle: left side, middle vertical area
+        xRangeStart = 0;
+        xRangeEnd = 30;
+        yRangeStart = 30;
+        yRangeEnd = 70;
+      } else if (i % 3 === 1) {
+        // Top left: top left corner
+        xRangeStart = 0;
+        xRangeEnd = 30;
+        yRangeStart = -30; // Above the screen
+        yRangeEnd = 0;
+      } else {
+        // Top middle: top middle area
+        xRangeStart = 35;
+        xRangeEnd = 65;
+        yRangeStart = -30; // Above the screen
+        yRangeEnd = 0;
+      }
+
       newMeteors.push({
         id: i,
         size: Math.random() * 2 + 1,
         widthFactor: Math.random() * 30 + 30, // Random width factor between 30-60
         heightFactor: Math.random() * 2 + 1,  // Random height factor between 1-3
-        x: Math.random() * 100,
-        y: Math.random() * 20,
+        x: xRangeStart + Math.random() * (xRangeEnd - xRangeStart),
+        y: yRangeStart + Math.random() * (yRangeEnd - yRangeStart),
         delay: Math.random() * 15,
-        animationDuration: Math.random() * 3 + 3,
+        animationDuration: Math.random() * 6 + 6, // Slower speed: 6-12 seconds instead of 3-6 seconds
       });
     }
 
