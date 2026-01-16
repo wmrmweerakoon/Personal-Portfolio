@@ -34,15 +34,15 @@ export const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={cn(
-        "p-2 rounded-full transition-colors duration-300 hover:bg-foreground/10",
-        "focus:outline-none focus:ring-2 focus:ring-primary"
+        "p-2 rounded-full transition-colors duration-300 hover:bg-foreground/10 border-2 border-primary",
+        "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
       )}
       aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
     >
       {isDarkMode ? (
-        <Sun size={24} className="text-foreground" />
+        <Sun size={20} className="text-primary" />
       ) : (
-        <Moon size={24} className="text-foreground" />
+        <Moon size={20} className="text-primary" />
       )}
     </button>
   );
