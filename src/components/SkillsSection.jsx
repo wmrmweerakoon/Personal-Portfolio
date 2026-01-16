@@ -13,7 +13,7 @@ const skills = [
  { name: "TailwindCSS", level: 90, category: "programming", icon: "devicon-tailwindcss-plain" },
   { name: "Node.js", level: 80, category: "programming", icon: "devicon-nodejs-plain" },
   { name: "Express", level: 75, category: "programming", icon: "devicon-express-original" },
-  { name: "REST APIs", level: 85, category: "programming", icon: "devicon-api-plain" },
+  { name: "REST APIs", level: 85, category: "programming", icon: "react-icon", reactIcon: FaBolt }, // Bolt icon for APIs
   { name: "SQLite", level: 70, category: "programming", icon: "devicon-sqlite-plain" },
   { name: "MongoDB", level: 75, category: "programming", icon: "devicon-mongodb-plain" },
   { name: "Firebase Hosting", level: 75, category: "programming", icon: "devicon-firebase-plain" },
