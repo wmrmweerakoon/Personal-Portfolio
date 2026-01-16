@@ -60,7 +60,7 @@ export const Navbar = () => {
     >
       <div className="container flex items-center justify-between">
           <a
-            className="flex items-center font-unbounded"
+            className="flex items-center justify-center font-unbounded"
             href="#hero"
             onClick={(e) => {
               e.preventDefault();
@@ -78,7 +78,7 @@ export const Navbar = () => {
             <img 
               src="/src/assets/logo.png" 
               alt="Logo" 
-              className="h-12 w-auto object-contain"
+              className="h-10 w-auto object-contain"
             />
           </a>
 
