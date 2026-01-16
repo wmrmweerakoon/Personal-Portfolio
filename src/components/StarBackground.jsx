@@ -42,13 +42,15 @@ export const StarBackground = () => {
   };
 
   const generateMeteors = () => {
-    const numberOfMeteors = 4;
+    const numberOfMeteors = 12;
     const newMeteors = [];
 
     for (let i = 0; i < numberOfMeteors; i++) {
       newMeteors.push({
         id: i,
         size: Math.random() * 2 + 1,
+        widthFactor: Math.random() * 30 + 30, // Random width factor between 30-60
+        heightFactor: Math.random() * 2 + 1,  // Random height factor between 1-3
         x: Math.random() * 100,
         y: Math.random() * 20,
         delay: Math.random() * 15,
@@ -79,16 +81,43 @@ export const StarBackground = () => {
       {meteors.map((meteor) => (
         <div
           key={meteor.id}
-          className="meteor animate-meteor"
+          className="relative"
           style={{
-            width: meteor.size * 50 + "px",
-            height: meteor.size * 2 + "px",
             left: meteor.x + "%",
             top: meteor.y + "%",
-            animationDelay: meteor.delay,
-            animationDuration: meteor.animationDuration + "s",
+            width: meteor.size * meteor.widthFactor + "px",
+            height: "4px",
           }}
-        />
+        >
+          {/* Meteor Head */}
+          <div
+            className="absolute rounded-full animate-meteor"
+            style={{
+              width: (meteor.size * 3) + "px",
+              height: (meteor.size * 3) + "px",
+              left: "0",
+              top: "-3px",
+              background: "radial-gradient(circle, #ffffff 0%, #66ffff 30%, #33ccff 70%, #0099ff 100%)",
+              boxShadow: "0 0 15px 5px rgba(0, 200, 255, 0.8)",
+              animationDelay: meteor.delay + "s",
+              animationDuration: meteor.animationDuration + "s",
+            }}
+          />
+          {/* Meteor Tail */}
+          <div
+            className="absolute rounded-full animate-meteor"
+            style={{
+              width: meteor.size * meteor.widthFactor + "px",
+              height: "2px",
+              left: (meteor.size * 3) + "px", // Position after the head
+              top: "0",
+              background: "linear-gradient(to right, #0099ff, #0066cc, transparent)",
+              opacity: 0.7,
+              animationDelay: meteor.delay + "s",
+              animationDuration: meteor.animationDuration + "s",
+            }}
+          />
+        </div>
       ))}
     </div>
   );
