@@ -3,35 +3,35 @@ import { cn } from "@/lib/utils";
 import { FaBolt, FaCloud, FaBrain, FaMobileAlt, FaPencilRuler, FaProjectDiagram, FaUniversalAccess, FaRobot, FaLightbulb, FaRocket, FaWrench, FaServer } from "react-icons/fa";
 import { SiVite, SiRender } from "react-icons/si";
 
-// Define our skills with react-icons
+// Define our skills with react-icons and specific colors for each icon
 const skills = [
   // Programming & Development
- { name: "JavaScript (ES6+)", level: 90, category: "programming", icon: "devicon-javascript-plain" },
-  { name: "TypeScript", level: 85, category: "programming", icon: "devicon-typescript-plain" },
-  { name: "React", level: 90, category: "programming", icon: "devicon-react-original" },
- { name: "Vite", level: 80, category: "programming", icon: "react-icon", reactIcon: SiVite }, // Using SiVite for Vite
- { name: "TailwindCSS", level: 90, category: "programming", icon: "devicon-tailwindcss-plain" },
-  { name: "Node.js", level: 80, category: "programming", icon: "devicon-nodejs-plain" },
-  { name: "Express", level: 75, category: "programming", icon: "devicon-express-original" },
-  { name: "REST APIs", level: 85, category: "programming", icon: "react-icon", reactIcon: FaBolt }, // Bolt icon for APIs
-  { name: "SQLite", level: 70, category: "programming", icon: "devicon-sqlite-plain" },
-  { name: "MongoDB", level: 75, category: "programming", icon: "devicon-mongodb-plain" },
-  { name: "Firebase Hosting", level: 75, category: "programming", icon: "devicon-firebase-plain" },
- { name: "Render", level: 70, category: "programming", icon: "react-icon", reactIcon: SiRender }, // Using SiRender for Render
- { name: "Git & GitHub", level: 90, category: "programming", icon: "devicon-git-plain devicon-github-original" },
+ { name: "JavaScript (ES6+)", level: 90, category: "programming", icon: "devicon-javascript-plain", color: "text-yellow-400" },
+  { name: "TypeScript", level: 85, category: "programming", icon: "devicon-typescript-plain", color: "text-blue-500" },
+  { name: "React", level: 90, category: "programming", icon: "devicon-react-original", color: "text-cyan-400" },
+ { name: "Vite", level: 80, category: "programming", icon: "react-icon", reactIcon: SiVite, color: "text-purple-500" }, // Using SiVite for Vite
+ { name: "TailwindCSS", level: 90, category: "programming", icon: "devicon-tailwindcss-plain", color: "text-cyan-600" },
+  { name: "Node.js", level: 80, category: "programming", icon: "devicon-nodejs-plain", color: "text-green-500" },
+  { name: "Express", level: 75, category: "programming", icon: "devicon-express-original", color: "text-gray-600" },
+  { name: "REST APIs", level: 85, category: "programming", icon: "react-icon", reactIcon: FaBolt, color: "text-yellow-500" }, // Bolt icon for APIs
+  { name: "SQLite", level: 70, category: "programming", icon: "devicon-sqlite-plain", color: "text-blue-600" },
+  { name: "MongoDB", level: 75, category: "programming", icon: "devicon-mongodb-plain", color: "text-green-600" },
+  { name: "Firebase Hosting", level: 75, category: "programming", icon: "devicon-firebase-plain", color: "text-orange-400" },
+ { name: "Render", level: 70, category: "programming", icon: "react-icon", reactIcon: SiRender, color: "text-indigo-500" }, // Using SiRender for Render
+ { name: "Git & GitHub", level: 90, category: "programming", icon: "devicon-git-plain devicon-github-original", color: "text-orange-600" },
 
   // AI & Automation
-  { name: "Google Gemini API", level: 80, category: "ai", icon: "devicon-google-plain" },
-  { name: "AI-driven document analysis", level: 75, category: "ai", icon: "react-icon", reactIcon: FaLightbulb }, // Lightbulb representing AI insights
-  { name: "Prompt engineering", level: 85, category: "ai", icon: "react-icon", reactIcon: FaLightbulb }, // Lightbulb representing AI insights
-  { name: "AI-powered Q&A systems", level: 80, category: "ai", icon: "react-icon", reactIcon: FaRobot }, // Robot representing AI/Q&A
+  { name: "Google Gemini API", level: 80, category: "ai", icon: "devicon-google-plain", color: "text-blue-400" },
+  { name: "AI-driven document analysis", level: 75, category: "ai", icon: "react-icon", reactIcon: FaLightbulb, color: "text-yellow-300" }, // Lightbulb representing AI insights
+  { name: "Prompt engineering", level: 85, category: "ai", icon: "react-icon", reactIcon: FaLightbulb, color: "text-yellow-300" }, // Lightbulb representing AI insights
+  { name: "AI-powered Q&A systems", level: 80, category: "ai", icon: "react-icon", reactIcon: FaRobot, color: "text-gray-500" }, // Robot representing AI/Q&A
 
   // UI/UX & Design
-  { name: "Figma", level: 85, category: "design", icon: "devicon-figma-plain" },
-  { name: "Responsive Design", level: 90, category: "design", icon: "react-icon", reactIcon: FaMobileAlt }, // Mobile icon for responsive design
-  { name: "Wireframing & Prototyping", level: 85, category: "design", icon: "react-icon", reactIcon: FaPencilRuler }, // Pencil ruler for wireframing
-  { name: "Design Systems", level: 80, category: "design", icon: "react-icon", reactIcon: FaProjectDiagram }, // Project diagram for design systems
-  { name: "Accessibility-aware UI", level: 85, category: "design", icon: "react-icon", reactIcon: FaUniversalAccess }, // Universal access for accessibility
+  { name: "Figma", level: 85, category: "design", icon: "devicon-figma-plain", color: "text-purple-400" },
+  { name: "Responsive Design", level: 90, category: "design", icon: "react-icon", reactIcon: FaMobileAlt, color: "text-blue-400" }, // Mobile icon for responsive design
+  { name: "Wireframing & Prototyping", level: 85, category: "design", icon: "react-icon", reactIcon: FaPencilRuler, color: "text-amber-500" }, // Pencil ruler for wireframing
+  { name: "Design Systems", level: 80, category: "design", icon: "react-icon", reactIcon: FaProjectDiagram, color: "text-emerald-500" }, // Project diagram for design systems
+  { name: "Accessibility-aware UI", level: 85, category: "design", icon: "react-icon", reactIcon: FaUniversalAccess, color: "text-violet-500" }, // Universal access for accessibility
 ];
 
 const categories = ["all", "programming", "ai", "design"];
@@ -74,9 +74,9 @@ export const SkillsSection = () => {
             >
               <div className="flex items-center mb-4">
                 {skill.icon === "react-icon" && skill.reactIcon ? (
-                  <skill.reactIcon className="text-2xl mr-3 text-primary" />
+                  <skill.reactIcon className={`text-2xl mr-3 ${skill.color}`} />
                 ) : skill.icon ? (
-                  <i className={`${skill.icon} text-2xl mr-3 text-primary`}></i>
+                  <i className={`${skill.icon} text-2xl mr-3 ${skill.color}`}></i>
                 ) : (
                   <i className="devicon-react-original text-2xl mr-3 text-primary"></i> // fallback icon
                 )}
