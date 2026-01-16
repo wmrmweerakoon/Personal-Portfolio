@@ -1,9 +1,8 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { GraduationCap, Code, Sparkles, Puzzle, Palette, Flower2 } from "lucide-react";
 
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-4 relative">
-      {" "}
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center font-unbounded">
           About <span className="text-primary"> Me</span>
@@ -12,21 +11,35 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold font-unbounded">
-              Passionate Web Developer & Tech Creator
+              Software Engineering Undergraduate
             </h3>
 
-            <p className="text-muted-foreground font-montserrat">
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
-            </p>
-
-            <p className="text-muted-foreground font-montserrat">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web
-              landscape.
-            </p>
+            <ul className="space-y-3 text-muted-foreground font-montserrat">
+              <li className="flex items-start gap-2">
+                <GraduationCap className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span>Software Engineering Undergraduate at SLIIT</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Code className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span>Passionate about building real-world, scalable web applications</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Sparkles className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span>Experienced in AI-powered applications using Google Gemini</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Puzzle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span>Strong interest in problem-solving, system design, and clean architecture</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Palette className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span>UI/UX-focused engineer who values usability, performance, and accessibility</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Flower2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span>Currently learning advanced React patterns, backend optimization, and cloud deployment</span>
+              </li>
+            </ul>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
@@ -43,49 +56,27 @@ export const AboutSection = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-6">
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Code className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
-                  <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
-                  </p>
-                </div>
+          <div className="space-y-6">
+            <div className="gradient-border p-6 card-hover text-center">
+              <div className="p-3 rounded-full bg-primary/10 mx-auto w-fit mb-3">
+                <GraduationCap className="h-6 w-6 text-primary mx-auto" />
               </div>
+              <h4 className="font-semibold text-lg">Education</h4>
+              <p className="text-muted-foreground">Software Engineering Undergraduate at SLIIT</p>
             </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
-                  <p className="text-muted-foreground">
-                    Designing intuitive user interfaces and seamless user
-                    experiences.
-                  </p>
-                </div>
+            <div className="gradient-border p-6 card-hover text-center">
+              <div className="p-3 rounded-full bg-primary/10 mx-auto w-fit mb-3">
+                <Code className="h-6 w-6 text-primary mx-auto" />
               </div>
+              <h4 className="font-semibold text-lg">Web Development</h4>
+              <p className="text-muted-foreground">Building scalable web applications</p>
             </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
-                </div>
-
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
-                  <p className="text-muted-foreground">
-                    Leading projects from conception to completion with agile
-                    methodologies.
-                  </p>
-                </div>
+            <div className="gradient-border p-6 card-hover text-center">
+              <div className="p-3 rounded-full bg-primary/10 mx-auto w-fit mb-3">
+                <Sparkles className="h-6 w-6 text-primary mx-auto" />
               </div>
+              <h4 className="font-semibold text-lg">AI Integration</h4>
+              <p className="text-muted-foreground">Experienced with Google Gemini API</p>
             </div>
           </div>
         </div>

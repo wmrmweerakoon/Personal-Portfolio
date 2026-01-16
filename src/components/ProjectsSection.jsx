@@ -3,32 +3,48 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
+    title: "LeafLink – Plant Marketplace",
+    description: "Full-stack MERN e-commerce platform for buying and selling plants. Features secure JWT authentication, Stripe payments, seller & admin dashboards, Cloudinary image storage, and an AI-powered plant care assistant using the Gemini API.",
+    image: "/projects/Plant MarketPlace.png",
+    tags: ["React", "Vite", "TailwindCSS", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Stripe", "Cloudinary", "Gemini API", "React Toastify"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/wmrmweerakoon/Plant-Marketplace.git",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
-    description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+    title: "AI PDF Content Finder",
+    description: "Full-stack AI web application that extracts PDF content and answers user questions using Google Gemini. Includes database storage, deployment, and a responsive UI.",
+    image: "/projects/AI_PDF.png",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express.js", "PDF.js", "Gemini API"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/wmrmweerakoon/AskMyPDF.git",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
-    description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+    title: "AI Student Assistant",
+    description: "Educational AI chatbot with a conversational interface and intelligent response handling.",
+    image: "/projects/AIStudent.png",
+    tags: ["React", "Vite", "TypeScript", "Google Gemini API", "AI", "Chatbot"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/wmrmweerakoon/ai-student-assistant",
+  },
+  {
+    id: 4,
+    title: "Personal Portfolio Website",
+    description: "Modern, interactive portfolio website featuring animated elements, dark/light mode toggle, and responsive design. Showcases projects with detailed tech stacks and includes an interactive hero section with tilt effect on the profile image.",
+    image: "/projects/Portfolio.png",
+    tags: ["React", "Vite", "Tailwind CSS", "JavaScript", "HTML5", "CSS3", "Framer Motion", "React Parallax Tilt", "Responsive Design"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/wmrmweerakoon/Personal-Portfolio",
+  },
+  {
+    id: 5,
+    title: "YouCalm Mobile UI Prototype",
+    description: "Mobile app UI/UX prototype designed in Figma to promote mindfulness and stress relief.",
+    image: "/projects/Youcalm.png",
+    tags: ["Figma", "UI/UX", "Prototyping", "Mindfulness", "Mobile Design"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/wmrmweerakoon/YouCalm-Mobile-UI-Prototype",
   },
 ];
 
@@ -100,7 +116,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/wmrmweerakoon"
           >
             Check My Github <ArrowRight size={16} />
           </a>
