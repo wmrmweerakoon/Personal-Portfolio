@@ -84,7 +84,7 @@ export const CursorGlow = () => {
         width: '50px',
         height: '50px',
         borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(0, 150, 199, 0.8) 0%, rgba(0, 120, 180, 0.7) 30%, rgba(0, 90, 150, 0.5) 60%, transparent 80%)',
+        background: 'radial-gradient(circle, rgba(30, 120, 255, 0.8) 0%, rgba(50, 140, 230, 0.7) 30%, rgba(70, 160, 210, 0.5) 60%, transparent 80%)',
         transform: 'translate(-50%, -50%)',
         filter: 'blur(5px)',
         transition: 'left 0.1s ease-out, top 0.1s ease-out',
