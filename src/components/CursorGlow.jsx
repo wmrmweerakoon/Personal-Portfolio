@@ -33,7 +33,7 @@ export const CursorGlow = () => {
       particle.style.width = `${Math.random() * 10 + 5}px`; // Random size between 5-15px
       particle.style.height = `${Math.random() * 10 + 5}px`;
       particle.style.borderRadius = '50%';
-      particle.style.background = `rgba(0, 150, 255, ${Math.random() * 0.4 + 0.1})`; // Blue color variation
+      particle.style.background = `rgba(0, 150, 255, ${Math.random() * 0.5 + 0.3})`; // More intense blue color variation
       particle.style.pointerEvents = 'none';
       particle.style.zIndex = '9';
       particle.style.transform = 'translate(-50%, -50%)';
