@@ -42,10 +42,11 @@ export const SkillsSection = () => {
   const filteredSkills = skills.filter(
     (skill) => activeCategory === "all" || skill.category === activeCategory
   );
+
   return (
-    <section id="skills" className="py-24 px-4 relative bg-secondary/30">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+    <section id="skills" className="py-24 px-4 relative bg-secondary/30 overflow-hidden">
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center font-unbounded">
           My <span className="text-primary"> Skills</span>
         </h2>
 
@@ -55,7 +56,7 @@ export const SkillsSection = () => {
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                "px-5 py-2 rounded-full transition-colors duration-300 capitalize font-sora",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary/70 text-forefround hover:bd-secondary"
@@ -66,34 +67,42 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-8 md:gap-12 lg:gap-16 xl:gap-20">
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover flex flex-col"
+              className="relative group flex flex-col items-center"
+              style={{ animationDelay: `${key * 0.1}s` }}
             >
-              <div className="flex items-center mb-4">
+              {/* Floating Sphere Container */}
+              <div className={`
+                w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full flex items-center justify-center
+                ${skill.color.replace('text-', 'text-')} bg-current/10 backdrop-blur-sm
+                shadow-[inset_0_0_20px_rgba(255,0.2),0_0_20px_-5px_currentColor]
+                transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] group-hover:scale-110
+                animate-float-sphere
+                border border-current/20
+              `}
+              style={{ animationDelay: `${key * 0.3}s` }}>
+                {/* Inner glow effect */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-transparent via-current/5 to-transparent"></div>
+                
+                {/* Icon inside sphere */}
                 {skill.icon === "react-icon" && skill.reactIcon ? (
-                  <skill.reactIcon className={`text-2xl mr-3 ${skill.color}`} />
+                  <skill.reactIcon className={`text-3xl md:text-4xl relative z-10 ${skill.color}`} />
                 ) : skill.icon ? (
-                  <i className={`${skill.icon} text-2xl mr-3 ${skill.color}`}></i>
+                  <i className={`${skill.icon} text-3xl md:text-4xl relative z-10 ${skill.color}`}></i>
                 ) : (
-                  <i className="devicon-react-original text-2xl mr-3 text-primary"></i> // fallback icon
+                  <i className="devicon-react-original text-3xl md:text-4xl relative z-10 text-primary"></i> // fallback icon
                 )}
-                <h3 className="font-semibold text-lg">{skill.name}</h3>
-              </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: skill.level + "%" }}
-                />
               </div>
 
-              <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
+              {/* Skill name always visible */}
+              <div className="mt-4 text-center font-sora">
+                <p className="text-sm font-medium">{skill.name}</p>
+                <p className="text-xs text-muted-foreground mt-1 font-mono">{skill.level}%</p>
               </div>
+              
             </div>
           ))}
         </div>

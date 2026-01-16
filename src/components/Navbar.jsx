@@ -58,28 +58,28 @@ export const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between">
-        <a
-          className="flex items-center"
-          href="#hero"
-          onClick={(e) => {
-            e.preventDefault();
-            document.querySelector('#hero')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
+          <a
+            className="flex items-center font-unbounded"
+            href="#hero"
+            onClick={(e) => {
               e.preventDefault();
               document.querySelector('#hero')?.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}
-          tabIndex={0}
-          aria-label="Go to homepage"
-        >
-          <img 
-            src="/src/assets/logo.png" 
-            alt="Logo" 
-            className="h-12 w-auto object-contain"
-          />
-        </a>
+            }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                document.querySelector('#hero')?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            tabIndex={0}
+            aria-label="Go to homepage"
+          >
+            <img 
+              src="/src/assets/logo.png" 
+              alt="Logo" 
+              className="h-12 w-auto object-contain"
+            />
+          </a>
 
         {/* desktop nav */}
         <div className="hidden md:flex items-center space-x-1" role="menubar">
