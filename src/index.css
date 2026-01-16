@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "@fontsource/michroma";
-@import "@fontsource/sora";
+@import "@fontsource/montserrat";
 @import "@fontsource/unbounded";
 
 @theme {
@@ -24,7 +24,7 @@
   --animate-float-sphere: float-sphere 6s ease-in-out infinite;
 
   --font-michroma: "Michroma", system-ui, sans-serif;
-  --font-sora: "Sora", system-ui, sans-serif;
+  --font-montserrat: "Montserrat", system-ui, sans-serif;
   --font-unbounded: "Unbounded", system-ui, sans-serif;
 
   @keyframes float {
@@ -127,7 +127,7 @@
   }
 
   body {
-    @apply bg-background text-foreground transition-colors duration-300 font-sora;
+    @apply bg-background text-foreground transition-colors duration-300 font-montserrat;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -188,12 +188,12 @@
 @layer base {
   :root {
     --font-michroma: "Michroma", system-ui, sans-serif;
-    --font-sora: "Sora", system-ui, sans-serif;
+    --font-montserrat: "Montserrat", system-ui, sans-serif;
     --font-unbounded: "Unbounded", system-ui, sans-serif;
   }
 
   .font-michroma { font-family: var(--font-michroma); }
-  .font-sora { font-family: var(--font-sora); }
+  .font-montserrat { font-family: var(--font-montserrat); }
   .font-unbounded { font-family: var(--font-unbounded); }
 }
 

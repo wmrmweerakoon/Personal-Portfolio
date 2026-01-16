@@ -56,7 +56,7 @@ export const SkillsSection = () => {
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize font-sora",
+                "px-5 py-2 rounded-full transition-colors duration-300 capitalize font-montserrat",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary/70 text-forefround hover:bd-secondary"
@@ -98,7 +98,7 @@ export const SkillsSection = () => {
               </div>
 
               {/* Skill name always visible */}
-              <div className="mt-4 text-center font-sora">
+              <div className="mt-4 text-center font-montserrat">
                 <p className="text-sm font-medium">{skill.name}</p>
                 <p className="text-xs text-muted-foreground mt-1 font-mono">{skill.level}%</p>
               </div>

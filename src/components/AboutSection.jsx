@@ -15,13 +15,13 @@ export const AboutSection = () => {
               Passionate Web Developer & Tech Creator
             </h3>
 
-            <p className="text-muted-foreground font-sora">
+            <p className="text-muted-foreground font-montserrat">
               With over 5 years of experience in web development, I specialize
               in creating responsive, accessible, and performant web
               applications using modern technologies.
             </p>
 
-            <p className="text-muted-foreground font-sora">
+            <p className="text-muted-foreground font-montserrat">
               I'm passionate about creating elegant solutions to complex
               problems, and I'm constantly learning new technologies and
               techniques to stay at the forefront of the ever-evolving web
